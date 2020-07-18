@@ -31,7 +31,7 @@ class MoviePage extends Component {
     }
    
     async getMovieData(){
-        var MOVIE_ID = 475557;
+        var MOVIE_ID = 419704;
         var Moviedata = await axios.get(`https://api.themoviedb.org/3/movie/${MOVIE_ID}?api_key=${API_KEY}&language=en-US`)
 
        this.setState({

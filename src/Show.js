@@ -44,7 +44,7 @@ class Show extends Component {
                 />
                 <p className="numratings">{this.props.votes} Reviews</p>
               </div>
-              <div>
+              <div className ="moreinfo">
                 <p className="year">{this.props.year}</p>
                 <p className="runtime">{`${h}h ${min}min`}</p>
               </div>
