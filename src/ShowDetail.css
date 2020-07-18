@@ -1,80 +1,71 @@
-
-.ShowDetail{
-    width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-
-    
-  
-    
-    
+.ShowDetail {
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.tab-btns{
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-
+.tab-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
 
-.tab-btns button{
-    background-color: #141414;
-    text-transform: uppercase;
-    outline:  none;
-    border: none;
-    margin-left: 10px;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
+.tab-btns button {
+  background-color: #141414;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
 .Overview-content {
-    display: flex;
+  display: flex;
 }
-.Poster img{
-    width: 300px;
-    height: 400px;
+.Poster img {
+  width: 300px;
+  height: 400px;
 }
 
-.Story{
-    margin-left: 20px;
-    color: white;
-    font-size: 16px;
+.Story {
+  margin-left: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 26px;
+}
+
+@media (max-width: 500px) {
+  .ShowDetail {
+    width: 100%;
+    display: block;
+    align-self: flex-end;
+  }
+  .Poster {
+    display: none;
+  }
+  .tab-btns {
+    margin-top: 5px;
+  }
+
+  .tab-btns button {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 16px;
+  }
+  .Story {
+    margin: 0px;
+    font-size: 15px;
     font-weight: 400px;
-    line-height: 26px;
-}
-
-@media (max-width:500px){
-    .ShowDetail{
-        width: 100%;
-        display: block;
-        align-self: flex-end;
-    }
-    .Poster{
-        display: none;
-    }
-    .tab-btns{
-        margin-top: 5px;
-    }
-
-    .tab-btns button{
-        margin-left: 5px;
-        font-size: 14px;
-        font-weight: 500px;
-        line-height: 16px;
-    }
-    .Story{
-        margin:0px;
-        font-size: 15px;
-        font-weight: 400px;
-        line-height: 24px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .storyline{
-        font-weight: 300px;
-        font-size: 20px;
-        line-height: 29px;
-        
-        
-    }
+    line-height: 24px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .storyline {
+    font-weight: 300px;
+    font-size: 20px;
+    line-height: 29px;
+  }
 }
