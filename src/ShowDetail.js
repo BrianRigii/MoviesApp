@@ -1,8 +1,33 @@
 import React, { Component } from "react";
+import axios from "axios";
 
+import Cast from "./Cast";
 import "./ShowDetail.css";
+import API_KEY from "./Keys";
 
 class ShowDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cast: [],
+    };
+    this.getCast = this.getCast.bind(this);
+  }
+
+  async getCast() {
+    var resp = await axios.get(
+      `https://api.themoviedb.org/3/movie/${this.props.MOVIE_ID}/credits?api_key=${API_KEY}`
+    );
+    this.setState({
+      cast: [...resp.data.cast],
+    });
+    console.log(this.state.cast);
+  }
+
+  componentDidMount() {
+    this.getCast();
+  }
+
   render() {
     return (
       <div className="ShowDetail">
@@ -22,10 +47,31 @@ class ShowDetail extends Component {
             )}
           </div>
           <div className="Story">
-            <p className="storyline">Storyline</p>
+            <h5 className="storyline">Storyline</h5>
             <p>{this.props.overview}</p>
+            <div className="extraDetail">
+              <div className="air">
+                <h6>Released</h6>
+                <p>{this.props.releaseDate}</p>
+              </div>
+              <div className="status">
+                <h6>Status &nbsp;&nbsp;&nbsp;&nbsp;</h6>
+                <p>{this.props.status}</p>
+              </div>
+              <div className="genres">
+                <h6>Genres&nbsp;&nbsp;&nbsp;</h6>
+                <div className="genre-list">
+                  <p>
+                    {this.props.genres.map((e) => {
+                      return <span>{e.name}</span>;
+                    })}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <Cast casts={this.state.cast} />
       </div>
     );
   }

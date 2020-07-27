@@ -50,7 +50,10 @@
 
 .stars {
   display: flex;
+  
+
 }
+
 
 .btn {
   margin-top: 20px;
@@ -115,10 +118,12 @@
     display: flex;
     margin-bottom: 0px;
     align-items: center;
+    
   }
   .stars p {
     margin: 0px;
     margin-left: 5px;
+    margin-top: 4px;
   }
   .moreinfo p{
     margin-bottom: 0px;

@@ -19,13 +19,59 @@
   cursor: pointer;
   font-size: 20px;
 }
+
+.storyline{
+  font-size: 20px;
+  margin-right: 10px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
 .Overview-content {
   display: flex;
 }
 .Poster img {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
 }
+.extraDetail{
+  font-size: 16px;
+}
+.extraDetail h6{
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: 400;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.extraDetail p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+.air{
+  display: flex;
+  align-items: center;
+  margin:0px;
+  padding: 0px;
+
+  
+  
+}
+.status{
+  display: flex;
+  align-items: center;
+  margin:5px 0px 5px 0px;
+  padding: 0px;
+}
+.genres{
+  display: flex;
+  align-items: center;
+}
+.genres span{
+  margin-left: 5px;
+}
+
 
 .Story {
   margin-left: 20px;
@@ -46,6 +92,7 @@
   }
   .tab-btns {
     margin-top: 5px;
+    /* justify-content: space-evenly; */
   }
 
   .tab-btns button {
@@ -53,6 +100,9 @@
     font-size: 14px;
     font-weight: 500px;
     line-height: 16px;
+    background-color: #292929;
+    width: 30vw;
+    height: 10vw;
   }
   .Story {
     margin: 0px;
