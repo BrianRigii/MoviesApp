@@ -21,7 +21,6 @@ class ShowDetail extends Component {
     this.setState({
       cast: [...resp.data.cast],
     });
-    console.log(this.state.cast);
   }
 
   componentDidMount() {
@@ -63,7 +62,7 @@ class ShowDetail extends Component {
                 <div className="genre-list">
                   <p>
                     {this.props.genres.map((e) => {
-                      return <span>{e.name}</span>;
+                      return <span key={e.id}>{e.name}</span>;
                     })}
                   </p>
                 </div>
